@@ -5,6 +5,7 @@
 body {
     font-family: sans-serif;
     font-size: 18px;
+    background-image: url("../images/cows2.jpeg");
 }
 
 a {
@@ -23,20 +24,25 @@ h1 a {
 }
 
 h2, h3 {
-    font-size: 1.4em;
+    font-size: 1.2em;
     margin: 0;
     display: inline-block;
     padding: 0.5rem 1rem;
     vertical-align: top;
 }
 
+h3 a {
+    text-decoration: none;
+}
+
 h2 {
     /* background-color: lightpink; */
-    background-color: aquamarine;
+    background-color: goldenrod;
+    border-radius: 50%;
 }
 
 .mark {
-    background-color: gainsboro;
+    background-color: beige;
 }
 .mark a {
     text-decoration: none;
@@ -111,4 +117,46 @@ input[type="submit"] {
     padding: 1rem;
     text-align: center;
     margin: 1rem 0;
+}
+
+
+button {
+    border-radius: 50%;
+    background-color: beige;
+}
+
+
+
+
+#navbar {
+    overflow: hidden;
+    background-color: #3333;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position:fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
 }

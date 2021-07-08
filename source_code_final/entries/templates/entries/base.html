@@ -4,13 +4,34 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Diary</title>
+    <title>Dairy</title>
     <link rel="stylesheet" href="{% static 'css/diary.css' %}">
+	<script src="{% static 'js/main.js' %}" defer></script>
 </head>
 
 <body>
-    <h1><a href="/">Dear diary …</a></h1>
+	
+	
+	<h1><a href="/">Dear dairy …</a></h1>
+	<div class="a" id="weather"></div>
+	<div class="a" id="ajax-data"></div>
+	
+<form id="zip-form">
+	<label for="zip">Enter your zip code</label>
+	<input type="text" name="zip", id="zip" required>
+	<input type="submit" value="Get Weather">
+</form>
 
+	<div id="navbar">
+		<a href="/">Home</a>
+		<a href="https://www.theonion.com/">News</a>
+		<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Contact</a>
+		<button class="a" id="ajax-button">AJAX</button>
+		<a href="{% url 'admin:logout' %}">Logout</a>
+		
+	</div>
+
+<div class="content">
     {% if messages %}
 	    <ul class="messages">
 	    {% for message in messages %}
@@ -22,9 +43,9 @@
 	{% endif %}
 
     {% block content %}{% endblock %}
-
-    <hr>
-	<a href="{% url 'admin:logout' %}">Logout</a>
+</div>
+    
+	
 </body>
 
 </html>
